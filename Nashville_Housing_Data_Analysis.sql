@@ -170,7 +170,7 @@ SELECT SaleDay, COUNT(*) AS Daily_Numb_Sales
 FROM [Portfolio Project]..NashvilleHousing
 GROUP BY SaleDay
 ORDER BY Daily_Numb_Sales DESC
---It appears that more sales (3,478) are generated the 30th of month, followed by the 15th.
+
 
 
 -- Showing number of sales per month
@@ -179,7 +179,7 @@ SELECT SaleMonthName, COUNT(*) AS Monthly_Numb_Sales
 FROM [Portfolio Project]..NashvilleHousing
 GROUP BY SaleMonthName
 ORDER BY  Monthly_Numb_Sales DESC
--- We see that June has the highest number of sales (6,593) followed by May (5,931) and August (5,620). This shows that highest sales are generated in the middle of year.
+
 
 
 -- Showing number of sales per year
@@ -189,7 +189,7 @@ FROM [Portfolio Project]..NashvilleHousing
 GROUP BY SaleYear
 ORDER BY SaleYear DESC
 
--- The high interest for Nashville housing started in 2013 with 11,292 as total sales. This figure increased and reached 14,274 in 2014, and 16,734 in 2015 and finally decreased slightly in 2016 (14,071).
+
 
 -- Showing number of sales by land use
 
@@ -197,7 +197,7 @@ SELECT LandUse, COUNT(*) AS LandUse_Num_Sales
 FROM [Portfolio Project]..NashvilleHousing
 GROUP BY LandUse
 ORDER BY LandUse_Num_Sales DESC
--- We notice that the top 3 land use are: "Single Family" having the highest number of sales (34,119), followed by "Residential Condo" (14,064) and Vacant Residential Land (5092) 
+
 
 -- Showing number of sales by property location
 
@@ -205,7 +205,7 @@ SELECT PropertySplitCity, COUNT(*) AS Numb_Sales_by_location
 FROM [Portfolio Project]..NashvilleHousing
 GROUP BY PropertySplitCity
 ORDER BY Numb_Sales_by_location DESC
---We see that Nashville has the highest demand for homes with a total sale of 40,246, followed by its neighbourhoods Antioch (6,284) and Hermitage (3,216) 
+ 
 
 -- Showing homes with highest sale prices
 
@@ -214,7 +214,7 @@ SELECT SaleDateConverted, LandUse, PropertySplitCity, MAX(SalePrice) AS Highest_
 FROM [Portfolio Project]..NashvilleHousing
 GROUP BY SaleDateConverted, LandUse, PropertySplitCity, SalePrice
 ORDER BY SalePrice DESC 
--- Here we notice that the top three expensive homes (respectively $54,278,060, $14,100,000 and $13,156,000) have been sold for Residential Condo purposes and are located in Nashville.
+
 
 
 -- Showing home prices higher than all average sale price in relation to their locations
@@ -225,7 +225,7 @@ SELECT LandUse, PropertySplitCity, SalePrice
 FROM [Portfolio Project]..NashvilleHousing
 WHERE SalePrice > 327530
 GROUP BY LandUse, PropertySplitCity, SalePrice
--- Here we see that most expensive homes higher than all average sale price (327,530) that have been sold are mainly located in the following cities: WHITES CREEK,  OLD HICKORY,  NOLENSVILLE,  NASHVILLE,  MOUNT JULIET,  MADISON,  HERMITAGE,  GOODLETTSVILLE,  BRENTWOOD , and ANTIOCH
+
 
 
 -- Showing Total revenue generated per year
@@ -242,7 +242,7 @@ SELECT SaleYear
 ,FORMAT (Yearly_AvPrice,'C','en-us') AS Yearly_AvPrice
 ,FORMAT (Yearly_Numb_Sales * Yearly_AvPrice,'C','en-us') AS Yearly_Tot_Revenue
 FROM CTE_Revenue
--- It appears that 2015 is the winning year in Nashville housing market with a total revenue of $6,692,529,024 generated. Next, comes 2014 at 2nd position ($4,772,540,448), followed by 2016 ($4,236,370,041) and 2013 ($2,761,763,484).
+
 
 
 
