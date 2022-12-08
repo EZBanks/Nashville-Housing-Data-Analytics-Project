@@ -1,5 +1,9 @@
 # Nashville-Housing-Data-Analytics-Project
 
+To view raw code, please check the .sql file above
+
+For a complete review (sql code, analysis, and visualization) please check the .pdf file above
+
 ## Executive Summary
 
 The aim of this analysis is to focus on Nashville housing boom from 2013 to 2016. More 
